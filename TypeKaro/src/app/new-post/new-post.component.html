@@ -1,0 +1,27 @@
+    <div class="card my-4">
+      <h5 class="card-header">Do you want to start discussion ?</h5>
+      <div class="card-body">
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+          <div class="input-group">
+            <input type="text" class="form-control" maxlength="100" formControlName="groupHeader" placeholder="Title">
+          </div>
+          <br>
+          <div *ngIf="Categories && Categories.length > 0" class="input-group">
+            <select class="form-control" formControlName="groupTypeId">
+              <option *ngFor="let category of Categories" [ngValue]="category.groupTypeId">
+                {{ category.groupTypeName }}</option>
+            </select>
+          </div>
+          <br>
+          <div class="input-group">
+            <textarea class="form-control" formControlName="groupMessage" maxlength="1000" placeholder="Typing something"></textarea>
+            <span class="input-group-append">
+              <button class="btn btn-secondary" type="submit" [disabled]="!postForm.valid">Post</button>
+            </span>           
+          </div>
+          <div class="count-div">
+            <div class="count-text" > {{ groupMessageLength | async }} /1000 </div>
+        </div>
+        </form>
+      </div>
+    </div>

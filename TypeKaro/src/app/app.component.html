@@ -1,0 +1,45 @@
+ <app-menu></app-menu>
+ <!-- Page Content -->
+ <div class="container">
+   <div class="row">
+     <!-- Sidebar Widgets Column -->
+     <div class="col-md-3">
+       <app-sidebar></app-sidebar>
+     </div>
+     <!-- Blog Entries Column -->
+     <div class="col-md-6">
+       <router-outlet></router-outlet>
+     </div>
+     <div class="col-md-3">
+       <div class="card my-4">
+         <h5 class="card-header">Settings</h5>
+         <div class="card-body">
+           <div class="row">
+             <div class="col-lg-6">
+               <ul class="list-unstyled mb-0">
+                 <li>
+                   Group
+                 </li>
+                 <li>
+                   Follower
+                 </li>
+                 <li>
+                   Following
+                 </li>
+                 <li>
+                   Privacy
+                 </li>
+                 <li>
+                   Security
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- /.row -->
+ </div>
+ <!-- /.container -->
+ <app-footer></app-footer>

@@ -1,0 +1,52 @@
+
+<div *ngIf="UserPosts && UserPosts.length > 0" >
+<!-- Blog Post -->
+<div class="card mb-4" *ngFor="let userpost of UserPosts | sortBy: 'desc':'createdDate'" >
+  <!-- <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> -->
+  <div class="card-body">
+    <h2 class="card-title">{{ userpost.postHeader }}</h2>
+    <p class="card-text">{{ userpost.postMessage }}</p>
+    <a routerLink="/detail/{{ userpost.postId }}" class="btn btn-primary">Read More &rarr;</a>
+  </div>
+  <div class="card-footer text-muted">
+    Posted on {{ userpost.createdDate | date:'medium' }} by
+    <a href="#">Manvendra</a>
+  </div>
+</div>
+</div>
+    
+  <!-- <div class="card mb-4">
+    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">Health</h2>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+      <a routerLink="/detail/1" class="btn btn-primary">Read More &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+      Posted on January 1, 2020 by
+      <a href="#">Rahul</a>
+    </div>
+  </div> -->
+
+  <!-- <div class="card mb-4">
+    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">Education Policy</h2>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+      <a routerLink="/detail/1" class="btn btn-primary">Read More &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+      Posted on January 1, 2020 by
+      <a href="#">Tejpal</a>
+    </div>
+  </div> -->
+
+  <!-- Pagination -->
+  <!-- <ul class="pagination justify-content-center mb-4">
+    <li class="page-item">
+      <a class="page-link" href="#">&larr; Older</a>
+    </li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#">Newer &rarr;</a>
+    </li>
+  </ul> -->
